@@ -5,7 +5,7 @@
 int main() {
  std::vector<int> v { 6,5,4,3,2,1 };
 
- QuickSort::sort(v);
+ parallel::QuickSort::sort<int>(v);
  bool ok = true;
  for (int i = 1; i <= 6; i++)
 	 ok = ok || (v[i] == i);
