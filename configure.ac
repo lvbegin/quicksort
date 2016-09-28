@@ -10,7 +10,7 @@ AM_INIT_AUTOMAKE
 # Checks for programs.
 AC_PROG_CXX
 AC_PROG_CC
-
+AX_CXX_COMPILE_STDCXX_11([noext],[mandatory])
 # Checks for libraries.
 AC_CHECK_LIB(pthread, pthread_create)
 # Checks for header files.

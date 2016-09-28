@@ -440,6 +440,7 @@ ECHO_T = @ECHO_T@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 GREP = @GREP@
+HAVE_CXX11 = @HAVE_CXX11@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -512,10 +513,10 @@ top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = subdir-objects
 noinst_LIBRARIES = libparallel.a
 libparallel_a_SOURCES = src/quicksort.cpp include/quicksort.h
-libparallel_a_CPPFLAGS = -std=c++11 -I$(top_srcdir)/include
+libparallel_a_CPPFLAGS = -I$(top_srcdir)/include
 include_HEADERS = include/quicksort.h
 quicksort_test_SOURCES = test/test.cpp
-quicksort_test_CPPFLAGS = -std=c++11 -I$(top_srcdir)/include
+quicksort_test_CPPFLAGS = -I$(top_srcdir)/include
 quicksort_test_LDADD = libparallel.a 
 quicksort_testdir = $(top_distdir)
 all: config.h

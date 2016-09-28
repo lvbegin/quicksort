@@ -428,7 +428,7 @@ CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPP = gcc -E
 CPPFLAGS = 
-CXX = g++
+CXX = g++ -std=c++11
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
@@ -440,6 +440,7 @@ ECHO_T =
 EGREP = /bin/grep -E
 EXEEXT = 
 GREP = /bin/grep
+HAVE_CXX11 = 1
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -512,10 +513,10 @@ top_srcdir = .
 AUTOMAKE_OPTIONS = subdir-objects
 noinst_LIBRARIES = libparallel.a
 libparallel_a_SOURCES = src/quicksort.cpp include/quicksort.h
-libparallel_a_CPPFLAGS = -std=c++11 -I$(top_srcdir)/include
+libparallel_a_CPPFLAGS = -I$(top_srcdir)/include
 include_HEADERS = include/quicksort.h
 quicksort_test_SOURCES = test/test.cpp
-quicksort_test_CPPFLAGS = -std=c++11 -I$(top_srcdir)/include
+quicksort_test_CPPFLAGS = -I$(top_srcdir)/include
 quicksort_test_LDADD = libparallel.a 
 quicksort_testdir = $(top_distdir)
 all: config.h
